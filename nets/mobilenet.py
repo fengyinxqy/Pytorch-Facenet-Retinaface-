@@ -8,6 +8,9 @@ def conv_bn(inp, oup, stride = 1):
         nn.ReLU6()
     )
     
+""" 
+	深度可分离捐几
+"""
 def conv_dw(inp, oup, stride = 1):
     return nn.Sequential(
         nn.Conv2d(inp, inp, 3, stride, 1, groups=inp, bias=False),
