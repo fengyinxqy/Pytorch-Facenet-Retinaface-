@@ -9,7 +9,7 @@ def conv_bn(inp, oup, stride = 1):
     )
     
 """ 
-	深度可分离捐几
+	深度可分离卷积层
 """
 def conv_dw(inp, oup, stride = 1):
     return nn.Sequential(
