@@ -14,8 +14,8 @@ def conv_bn(inp, oup, stride = 1):
 def conv_dw(inp, oup, stride = 1):
     return nn.Sequential(
         nn.Conv2d(inp, inp, 3, stride, 1, groups=inp, bias=False),
-        nn.BatchNorm2d(inp),
-        nn.ReLU6(),
+        nn.BatchNorm2d(inp),	#标准化
+        nn.ReLU6(),	#激活函数
 
         nn.Conv2d(inp, oup, 1, 1, 0, bias=False),
         nn.BatchNorm2d(oup),
